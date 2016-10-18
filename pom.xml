@@ -5,7 +5,7 @@
     <groupId>io.mikael.poc</groupId>
     <artifactId>spring-boot-maven-frontend-poc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>spring-boot-maven-frontend-poc</name>
     <description>Spring Boot plus Maven Frontend plugin POC</description>
@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.4.1.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -76,9 +76,11 @@
                 <version>1.0</version>
                 <configuration>
                     <workingDirectory>src/main/frontend</workingDirectory>
-                    <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
-                    <nodeVersion>v6.4.0</nodeVersion>
-                    <npmVersion>3.10.3</npmVersion>
+                    <!--<nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>-->
+                    <nodeDownloadRoot>https://npm.taobao.org/dist/</nodeDownloadRoot>
+                    <!--<npmDownloadRoot>https://npm.taobao.org/mirrors/npm/</npmDownloadRoot>-->
+                    <nodeVersion>v6.8.1</nodeVersion>
+                    <npmVersion>v3.10.3</npmVersion>
                     <installDirectory>target</installDirectory>
                 </configuration>
                 <executions>
